@@ -28,13 +28,11 @@ export default {
     });
 
     function add() {
-      console.log("checking");
       if (name.value === "" || unit.value === "" || count.value === "" || 
         price.value === "" || sum.value === "") {
         invalidInput.value = false;
         return;
       }
-      console.log("sending" + newRow.value);
       context.emit("add-row", newRow.value);
 
     }
